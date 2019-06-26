@@ -22,7 +22,8 @@
       "prettier/prettier": "error",
       "import/no-commonjs": 0,
       "import/no-nodejs-modules": 0,
-      "no-useless-catch": 0
+      "no-useless-catch": 0,
+      "eqeqeq": ["error", "smart"]
     },
     "env": {
       "jest/globals": true

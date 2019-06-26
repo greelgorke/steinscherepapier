@@ -1,8 +1,9 @@
 const gameRules = require("./gameRules.js");
+const gameRulesExtended = require("./gameRulesExtended.js");
 
 const outcomes = ["tie", "win", "loose"];
 
-module.exports = function turn(humanInput) {
+function turn(humanInput, gameRules) {
   const randomFigureIndex = Math.floor(Math.random() * 10) % 3;
   const randomFigure = gameRules.figures[randomFigureIndex];
   const outcome = gameRules(humanInput, randomFigure);
@@ -11,6 +12,14 @@ module.exports = function turn(humanInput) {
     generatedInput: randomFigure,
     outcome: outcomes[outcome]
   };
-};
+}
 
+module.exports = function classicTurn(humanInput) {
+  return turn(humanInput, gameRules);
+};
 module.exports.figures = gameRules.figures;
+
+module.exports.extended = function extendedTurn(humanInput) {
+  return turn(humanInput, gameRulesExtended);
+};
+module.exports.extended.figures = gameRulesExtended.figures;

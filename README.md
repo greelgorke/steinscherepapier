@@ -22,3 +22,9 @@ To access the game via REST use
 ```
 curl -d '{"figure":"stein"}' -H "Content-Type: application/json" -X POST http://localhost:3000/game
 ```
+
+To access the game with extended rules via REST use
+
+```
+curl -d '{"figure":"stein"}' -H "Content-Type: application/json" -X POST http://localhost:3000/game/extended
+```

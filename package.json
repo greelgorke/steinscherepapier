@@ -1,0 +1,44 @@
+{
+  "name": "steinscherepapier",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "eslint *.js --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "jest": "^24.8.0",
+    "morgan": "~1.9.1"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "prettier", "jest"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-commonjs": 0,
+      "import/no-nodejs-modules": 0,
+      "no-useless-catch": 0
+    },
+    "env": {
+      "jest/globals": true
+    },
+    "extends": [
+      "node",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "6.0.1",
+    "eslint-config-node": "^4.0.0",
+    "eslint-config-prettier": "5.1.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "prettier": "1.18.2",
+    "supertest": "^4.0.2"
+  }
+}

@@ -4,7 +4,8 @@ const gameRulesExtended = require("./gameRulesExtended.js");
 const outcomes = ["tie", "win", "loose"];
 
 function turn(humanInput, gameRules) {
-  const randomFigureIndex = Math.floor(Math.random() * 10) % 3;
+  const randomFigureIndex =
+    Math.floor(Math.random() * 10) % gameRules.figures.length;
   const randomFigure = gameRules.figures[randomFigureIndex];
   const outcome = gameRules(humanInput, randomFigure);
   return {
